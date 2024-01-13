@@ -44,7 +44,7 @@ const ProductSearch = () => {
         Search
       </button>
       <h3>Product List:</h3>
-      { searchResults ?
+      { (searchResults !== 'No products found') ?
        <ul>
         {searchResults.map((product) => (
           <ProductCard productProp={product} key={product._id} />
