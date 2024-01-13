@@ -16,7 +16,12 @@ const ProductSearch = () => {
         body: JSON.stringify({ productName: searchQuery }),
       });
       const data = await response.json();
-      setSearchResults(data);
+
+      if (!data) {
+        setSearchResults('No products found');
+      } else {
+        setSearchResults(data);
+      }
     } catch (error) {
       console.error('Error finding your product:', error);
     }
