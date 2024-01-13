@@ -33,7 +33,7 @@ export default function Profile() {
 		          console.error(errorData);
 		        }
 		    } catch (error) {
-	        console.log('An error occurred. Please try again.');
+	        // console.log('An error occurred. Please try again.');
 	        console.error(error);
 	    	}
     	};

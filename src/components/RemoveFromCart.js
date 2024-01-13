@@ -31,7 +31,7 @@ export default function RemoveFromCart({ orderData, productId, quantity, updateI
             return res.json();
           })
     .then(data => {
-      console.log(data);
+      // console.log(data);
 
       if(data.message === 'Success') {
 

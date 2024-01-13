@@ -29,11 +29,11 @@ export default function Checkout({ orderId }) {
 
           });
 
-          console.log('response: ', response);
+          // console.log('response: ', response);
 
           if (response.ok) {
             const data = await response.text();
-            console.log('Checkout success. Data: ', data);
+            // console.log('Checkout success. Data: ', data);
             setCheckoutStatus(data);
           } else {
             const errorData = await response.json();
@@ -41,15 +41,15 @@ export default function Checkout({ orderId }) {
           }
         }
       } catch (error) {
-        console.log('An error occurred. Please try again.');
+        // console.log('An error occurred. Please try again.');
         console.error(error);
       }
     };
 
     processCheckout();
 
-    console.log('user: ', user);    
-    console.log('order ID: ', orderId);
+    // console.log('user: ', user);    
+    // console.log('order ID: ', orderId);
 
   }, [user, orderId]);
 

@@ -28,7 +28,7 @@ export default function OrdersView() {
 	      },
 	    });
 
-	    console.log('response: ', response);
+	    // console.log('response: ', response);
 
 	    if(response.ok) {
 	      const data = await response.json();
@@ -39,7 +39,7 @@ export default function OrdersView() {
 	      console.error(errorData);
 	    }
 	  } catch (error) {
-	    console.log('An error occurred. Please try again.');
+	    // console.log('An error occurred. Please try again.');
 	    console.error(error);
 	  }
 	};
@@ -67,12 +67,12 @@ export default function OrdersView() {
 						    return item;
 						  }
 						} catch (error) {
-						  console.log('An error occurred fetching product details. Please try again.');
+						  // console.log('An error occurred fetching product details. Please try again.');
 						  console.error(error);
 						  return item;
 						}
 				}))
-		console.log('Updated order data: ', { ...orderData, items: updatedItems});
+		// console.log('Updated order data: ', { ...orderData, items: updatedItems});
 		setOrderData({ ...orderData, items: updatedItems});
 
 		} finally {
@@ -96,7 +96,7 @@ export default function OrdersView() {
 
 	const { _id, items, totalAmount, createdOn, checkoutDate } = orderData;
 
-	console.log("Order data items: ", orderData.items);
+	// console.log("Order data items: ", orderData.items);
 
 	const handleOrderCheckout = () => {
 	  setCheckoutClicked(true);

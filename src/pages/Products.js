@@ -42,7 +42,7 @@ export default function Products() {
 		// for useCallback info
 	}, [user.isAdmin]);
 
-		console.log(products)
+		// console.log(products)
 
 	// Retrieves products from the database upon intial render of the <Products/>
 

@@ -9,7 +9,7 @@ export default function ProductCard({ productProp }) {
 	const { _id: productIdFromProps, name, description, price } = productProp;
 	const { _id: productIdFromParams } = useParams();
 
-	console.log("Product ID in Component:", productIdFromProps || productIdFromParams);
+	// console.log("Product ID in Component:", productIdFromProps || productIdFromParams);
 
 	return (
 

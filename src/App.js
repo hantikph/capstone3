@@ -46,7 +46,7 @@ function App() {
     .then(res => res.json())
     // perform the task on the 'data' object containing the fetched information 
     .then(data => {
-      console.log(data);
+      // console.log(data);
 
       if(typeof data._id !== "undefined") {
         setUser({
@@ -65,7 +65,7 @@ function App() {
 
   }, [])
 
-  console.log(user);
+  // console.log(user);
 
   return (
     
