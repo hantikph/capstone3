@@ -21,12 +21,12 @@ export default function Register() {
 	// State to determine whether the submit button is enabled or not
 	const [ isActive, setIsActive ] = useState(false);
 
-	// console.log(firstName);
-	// console.log(lastName);
-	// console.log(email);
-	// console.log(mobileNo);
-	// console.log(password);
-	// console.log(confirmPassword);
+	console.log(firstName);
+	console.log(lastName);
+	console.log(email);
+	console.log(mobileNo);
+	console.log(password);
+	console.log(confirmPassword);
 
 
 	function registerUser(e) {
@@ -48,7 +48,7 @@ export default function Register() {
 		})
 		.then(res => res.json())
 		.then(data => {
-			// console.log(data)
+			console.log(data)
 
 			if (data) {
 				setFirstName("");

@@ -110,10 +110,10 @@ export default function Login() {
           icon: "error",
           text: "Please input your email address on the space provided.",
         });
-      // console.log("userEmail prop: ", email);
+      console.log("userEmail prop: ", email);
         return;
       }
-      // console.log("userEmail prop: ", email);
+      console.log("userEmail prop: ", email);
       setShowResetPassword(email);
     };
 

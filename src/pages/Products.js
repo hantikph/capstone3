@@ -14,7 +14,7 @@ export default function Products() {
 
 	const fetchData = useCallback(() => {
 
-		console.log('Fetching products...');
+		// console.log('Fetching products...');
 
 		const fetchRoute = user.isAdmin
 		  ? `${process.env.REACT_APP_API_URL}/products/all`

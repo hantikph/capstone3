@@ -19,7 +19,7 @@ export default function ProductCard({ productProp }) {
 						<Card.Subtitle className="mb-2">Description</Card.Subtitle>
 						<Card.Text className="mb-3">{description}</Card.Text>
 						<Card.Subtitle className="mb-2">Price</Card.Subtitle>
-						<Card.Text>PhP {price}</Card.Text>
+						<Card.Text>₱ {price}</Card.Text>
 					<Link className="btn btn-primary" to={`/products/${productIdFromProps || productIdFromParams}`}>Details</Link>
 					</Card.Body>
 				</Card>
@@ -31,7 +31,7 @@ export default function ProductCard({ productProp }) {
 ProductCard.propTypes = {
 	// .shape() method is used to check if a prop object conforms to a specific 'shape'
 	productProp: PropTypes.shape({
-		// Defin the properties and their expected types
+		// Define the properties and their expected types
 		name: PropTypes.string.isRequired,
 		description: PropTypes.string.isRequired,
 		price: PropTypes.number.isRequired

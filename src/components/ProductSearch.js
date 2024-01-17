@@ -16,14 +16,14 @@ const ProductSearch = () => {
         body: JSON.stringify({ productName: searchQuery }),
       });
       const data = await response.json();
-
-      if (!data) {
-        setSearchResults('No products found');
+      if (data.length === 0){
+        setSearchResults('no results');
       } else {
         setSearchResults(data);
       }
     } catch (error) {
       console.error('Error finding your product:', error);
+      setSearchResults('no results');
     }
   };
 
@@ -44,14 +44,17 @@ const ProductSearch = () => {
         Search
       </button>
       <h3>Product List:</h3>
-      { (searchResults !== 'No products found') ?
-       <ul>
-        {searchResults.map((product) => (
-          <ProductCard productProp={product} key={product._id} />
-        ))}
-      </ul> :
-      <p> No products found </p>
-      }
+      {
+        Array.isArray(searchResults) && searchResults.length > 0 
+        ? (
+        <ul>
+          {searchResults.map((product) => (
+            <ProductCard productProp={product} key={product._id} />
+          ))}
+        </ul> )
+        : (
+        <h4 className="text-danger text-center">No products to display</h4>
+      )}
     </div>
   );
 };

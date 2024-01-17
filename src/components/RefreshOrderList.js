@@ -19,7 +19,7 @@ export default function RefreshOrderList() {
         return res.json();
       })
       .then(data => {
-        console.log('Orders updated successfully:', data);
+        // console.log('Orders updated successfully:', data);
         // You can perform additional actions if needed
       })
       .catch(error => {

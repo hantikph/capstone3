@@ -16,7 +16,7 @@ export default function Checkout({ orderId }) {
       try {
       	const token = localStorage.getItem('token');
 
-      	console.log('Starting try block...');
+      	// console.log('Starting try block...');
 
         if (token !== 0 && user !== 0 && orderId !== 0) {
           const response = await fetch(`${process.env.REACT_APP_API_URL}/orders/checkout`, {

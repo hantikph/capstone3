@@ -57,7 +57,7 @@ export default function OrdersView() {
 						    method: 'GET',
 						  });
 
-						  console.log('response: ', response);
+						  // console.log('response: ', response);
 
 						  if(response.ok) {
 						    const productData = await response.json();
@@ -116,7 +116,7 @@ export default function OrdersView() {
 		    	<tbody>
 		    		<tr>
 		    			<td colSpan="3">Order ID: {_id}</td>
-	      				<td colSpan="3">Total Amount: ${totalAmount}</td>
+	      				<td colSpan="3">Total Amount: ₱ {totalAmount}</td>
       				</tr>
 	      			<tr>
 	      				<td colSpan="3">Created On: {new Date(createdOn).toLocaleString()}</td>
@@ -140,8 +140,8 @@ export default function OrdersView() {
 		            <tr className="text-center" key={index}>
 		              <td className="col-3">{item.productName}</td>
 		              <td className="col-2">{item.quantity}</td>
-		              <td className="col-2">${item.itemPrice}</td>
-		              <td className="col-2">${item.subTotal}</td>
+		              <td className="col-2">₱ {item.itemPrice}</td>
+		              <td className="col-2">₱ {item.subTotal}</td>
 		              <td className="col-3">
 		              	{checkoutDate ?
 		              		<Button variant="secondary" disabled="true">Checked Out</Button>
